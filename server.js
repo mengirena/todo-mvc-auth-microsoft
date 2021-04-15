@@ -23,7 +23,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// Sessions
+// keep Sessions and store the session in the database
 app.use(
     session({
       secret: 'keyboard cat',
