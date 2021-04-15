@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
-const passport = require('passport')
+const mongoose = require('mongoose') // talk to db
+const passport = require('passport') // handle authentication
 const session = require('express-session')  //express uses a cookie to store a session id
-const MongoStore = require('connect-mongo')(session)
+const MongoStore = require('connect-mongo')(session) //so we can keep logged in users always go back to the same page
 const connectDB = require('./config/database')
 
 //Route files we're using
