@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const passport = require('passport')
-const session = require('express-session')
+const session = require('express-session')  //express uses a cookie to store a session id
 const MongoStore = require('connect-mongo')(session)
 const connectDB = require('./config/database')
+
+//Route files we're using
 const authRoutes = require('./routes/auth')
 const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')

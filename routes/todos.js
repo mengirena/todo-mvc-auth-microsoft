@@ -3,7 +3,7 @@ const router = express.Router()
 const todosController = require('../controllers/todos') 
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
-router.get('/', ensureAuth, todosController.getTodos)
+router.get('/', ensureAuth, todosController.getTodos) // check if the user is logged in
 
 router.post('/createTodo', todosController.createTodo)
 
